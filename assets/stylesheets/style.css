@@ -1,102 +1,126 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700");
+
+:root {
+  --primary-color: #5271c4;
+  --secondary-color: #b19fff;
+  --tertiary-color: #eca1fe;
+  --quaternary-color: #b19fff;
+  --text-color: #ffffff;
+  --background-color: #ebebeb;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: #ECA1FE;
-    color: #ebebeb;
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    background: -moz-linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
-    background: -webkit-linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
-    background: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
-    -webkit-transition: transform 0.1s ease-in-out;
-    -moz-transition: transform 0.1s ease-in-out;
-    -ms-transition: transform 0.1s ease-in-out;
-    transition: transform 0.1s ease-in-out;
-    justify-content: center;
-    align-items: center;
+  background: #eca1fe;
+  color: #ebebeb;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(
+    -45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--tertiary-color),
+    var(--quaternary-color)
+  );
+  background-size: 400% 400%;
+  animation: gradientBackground 12s ease infinite;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
-    text-align: center;
-    padding: 20px;
-    text-transform: uppercase;
-    margin-bottom: 35px;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
 }
 
 .name {
-    font-size: 42px;
-    font-weight: bolder;
+  font-size: 42px;
+  font-weight: bolder;
 }
 
 .description {
-    color: #121212;
-    font-size: 16px;
-    padding-top: 6px;
-    font-weight: bold;
+  color: #121212;
+  font-size: 16px;
+  padding-top: 6px;
+  font-weight: bold;
 }
 
 .me {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .me img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .socials {
-    padding: 5px 0;
-    text-align: center;
+  padding: 5px 0;
+  text-align: center;
 }
 
 .socials i {
-    margin: 0 10px;
-    color: #121212;
-    cursor: pointer;
+  margin: 0 10px;
+  color: #121212;
+  cursor: pointer;
 }
 
 .socials i:hover {
-    color: #ebebeb;
-    -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+  color: #ebebeb;
+  -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .socials .title {
-    font-weight: bolder;
-    font-size: 22px;
-    margin-top: 50px;
-    margin-bottom: 15px;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 a {
-    font-size: 16px;
-    cursor: pointer;
-    color: #121212;
-    text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #121212;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #6c5ce7;
+  color: #6c5ce7;
 }
