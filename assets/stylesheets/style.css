@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  user-select: none;
   background: #eca1fe;
   color: #ebebeb;
   text-align: center;
@@ -27,13 +28,11 @@ body {
   height: 100%;
   overflow: hidden;
   display: flex;
-  background: linear-gradient(
-    -45deg,
-    var(--primary-color),
-    var(--secondary-color),
-    var(--tertiary-color),
-    var(--quaternary-color)
-  );
+  background: linear-gradient(-45deg,
+      var(--primary-color),
+      var(--secondary-color),
+      var(--tertiary-color),
+      var(--quaternary-color));
   background-size: 400% 400%;
   animation: gradientBackground 12s ease infinite;
   justify-content: center;
@@ -44,9 +43,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -60,6 +61,7 @@ body {
 }
 
 .name {
+  margin-top: 15px;
   font-size: 42px;
   font-weight: bolder;
 }
@@ -71,10 +73,18 @@ body {
   font-weight: bold;
 }
 
+.skills {
+  color: #121212;
+  font-size: 16px;
+  padding-top: 6px;
+  font-weight: bold;
+}
+
 .me {
+  margin: 0 auto;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   border-radius: 50%;
 }
